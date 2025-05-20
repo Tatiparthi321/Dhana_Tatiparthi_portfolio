@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhana Lakshmi | Projects</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f6a800;
+      color: #2d2d2d;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      background-color: #2d2d2d;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .main {
+      margin: 2rem;
+      padding: 2rem;
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2d2d2d;
+    }
+    .project {
+        margin-bottom: 1.5rem;
+        background-color: transparent;
+        transition: all 0.3s ease;
+        border: none; /* removed border */
+        border-radius: 0; /* removed rounding */
+        box-shadow: none; /* removed shadow */
+      }
+      
+      .project-title {
+        padding: 1rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: #2d2d2d;
+        font-weight: bold;
+        border: none; /* removed bottom border */
+      }
+      
+    .project-title:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+    .project-description {
+      display: none;
+      padding: 1rem;
+      color: #555;
+    }
+    .project.active .project-description {
+      display: block;
+    }
+    footer {
+      background-color: #2d2d2d;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: #f6a800;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+        <a href="home.html#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="internships.html">Internships</a>
+        <a href="home.html#contacts">Contacts</a>
+      </nav>
+      
+  <div class="main">
+    <h1>My Projects</h1>
+
+    <div class="project">
+      <div class="project-title">Lung Cancer Detection using LSTM and MobileNet</div>
+      <div class="project-description">
+        This project is a deep learning-based system designed to detect lung cancer from CT scan images. It uses a hybrid architecture combining <strong>MobileNet</strong> (a lightweight Convolutional Neural Network) for efficient image feature extraction and <strong>Long Short-Term Memory (LSTM)</strong> networks for learning temporal dependencies in image sequences.<br><br>
+        The model is trained on a dataset categorized into benign, malignant, and normal cases. It aims to support medical professionals by providing a reliable and efficient tool for early diagnosis of lung cancer using computer vision and AI.<br><br>
+        🔗 <a href="https://github.com/Tatiparthi321/Lung_cancer_prediction_using_lstm_and_mobilenet/tree/master" target="_blank">View Project on GitHub</a>
+      </div>
+      
+    </div>
+
+    <div class="project">
+        <div class="project-title">Research Paper Fetching Tool using PubMed API</div>
+        <div class="project-description">
+          This project involves building a Python-based command-line tool that fetches biomedical research papers from PubMed based on user-defined queries. It intelligently parses XML responses to extract metadata like title, publication date, affiliations, and corresponding author email. The results are filtered to identify non-academic authors linked to pharmaceutical or biotech companies and saved into a structured CSV format.<br><br>
+          🔗 <a href="https://youtu.be/krV-jROXi_s?si=WFNKo29efySSh8_U" target="_blank">Watch Project Video</a>
+        </div>
+      </div>
+      
+
+    <div class="project">
+      <div class="project-title">Department Activities Management System</div>
+      <div class="project-description">
+        A web-based application built to manage and streamline the academic and co-curricular activities of a college department. This system allows faculty and admin users to log in and maintain data related to seminars, workshops, student achievements, publications, and more.<br><br>
+        
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Email: <a href="mailto:dhanatatiparthi2003@gmail.com">dhanatatiparthi2003@gmail.com</a> | Phone: +91 89193 16863</p>
+    <p>© 2025 Dhana Lakshmi | Hyderabad, India</p>
+  </footer>
+
+  <script>
+    const projects = document.querySelectorAll('.project-title');
+    projects.forEach(title => {
+      title.addEventListener('click', () => {
+        const parent = title.parentElement;
+        parent.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
